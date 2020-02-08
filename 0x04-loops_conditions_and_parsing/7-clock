@@ -5,7 +5,7 @@ while [ $h -lt 13 ]
 do
 	echo "Hour: $h"
 	h=$((h + 1))
-	m=0
+	m=1
 	if [ $h -lt 13 ]
 	then
 		while [ $m -lt 60 ]
