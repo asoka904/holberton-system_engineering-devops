@@ -6,9 +6,12 @@ do
 	echo "Hour: $h"
 	h=$((h + 1))
 	m=0
-	while [ $m -lt 60 ]
-	do
-		echo $m
-		m=$((m + 1))
-	done
+	if [ $h -lt 13 ]
+	then
+		while [ $m -lt 60 ]
+		do
+			echo $m
+			m=$((m + 1))
+		done
+	fi
 done
