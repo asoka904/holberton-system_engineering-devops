@@ -1,6 +1,6 @@
 # Create a file in /tmp.
 
-file{'/tmp/holberton'
+file{'/tmp/holberton':
   ensure  => file,
   mode    => '0744',
   owner   => 'www-data',
