@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ Extend the first Python script to export data in the JSON format. """
-import requests
 import json
+import requests
 from sys import argv
+
 
 if __name__ == '__main__':
     req = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
