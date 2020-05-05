@@ -21,4 +21,4 @@ if __name__ == '__main__':
             'completed': task.get('completed'),
             'username': username})
     with open('{}.json'.format(argv[1]), 'w') as my_file:
-        json.dump(out, file)
+        json.dump(out, my_file)
