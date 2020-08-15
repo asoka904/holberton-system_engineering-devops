@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Install Load Balanecer
 
-apt-get update
-apt-get -y install haproxy
-echo "ENABLED=1" >> /etc/default/haproxy
+sudo apt-get update
+sudo apt-get -y install haproxy
+sudo echo "ENABLED=1" >> /etc/default/haproxy
 cp /etc/haproxy/haproxy.cfg .
-cat >> /etc/haproxy/haproxy.cfg << EOF
+sudo cat >> /etc/haproxy/haproxy.cfg << EOF
 frontend front
 	bind *:80
 	mode http
