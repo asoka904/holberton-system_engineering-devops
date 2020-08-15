@@ -18,6 +18,6 @@ sudo sed -i "/listen 80 default_server/a rewrite ^/redirect_me https://www.youtu
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 sudo sed -i "/listen 80 default_server/a error_page 404 /custom_404.html;\n \t location = /custom_404.html {\n \t\t root /usr/share/nginx/html;\n \t\t internal;\n \t}" /etc/nginx/sites-available/default
 
-sed -i "/listen 80 default_server/a add_header X-Served-By \"$HOSTNAME\";" /etc/nginx/sites-available/default
+sudo sed -i "/listen 80 default_server/a add_header X-Served-By \"$HOSTNAME\";" /etc/nginx/sites-available/default
 
 sudo service nginx restart
