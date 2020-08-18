@@ -2,3 +2,4 @@
 # Test headers
 curl -sI 34.74.31.131 | grep X-Served-By
 curl -sI 75.101.247.27 | grep X-Served-By
+curl -sI 54.242.97.133 | grep X-Served-By
