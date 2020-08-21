@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run service as Nginx user
 pkill apache2
-chmod 744 /etc/nginx/nginx.conf
+chmod 444 /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 sudo -u nginx service nginx restart
