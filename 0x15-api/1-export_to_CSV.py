@@ -10,7 +10,7 @@ from sys import argv
 if __name__ == '__main__':
     req = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
                        format(argv[1]))
-    name = req.json().get('username')
+    user = req.json().get('username')
     req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                        format(argv[1]))
     data = req.json()
@@ -20,5 +20,5 @@ if __name__ == '__main__':
                                 quoting=csv.QUOTE_ALL)
 
     for task in data:
-        csv_writer.writerow([argv[1], username, task.get('completed'),
+        csv_writer.writerow([argv[1], user, task.get('completed'),
                             task.get('title')])
