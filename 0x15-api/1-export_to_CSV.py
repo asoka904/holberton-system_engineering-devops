@@ -13,10 +13,7 @@ if __name__ == '__main__':
     name = req.json().get('username')
     req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                        format(argv[1]))
-
     data = req.json()
-    done = 0
-    total = 0
 
     with open('{}.csv'.format(argv[1]), mode='w') as data_file:
         csv_writer = csv.writer(data_file, delimiter=',', quotechar='"',
