@@ -23,11 +23,5 @@ if __name__ == '__main__':
                                 quoting=csv.QUOTE_ALL)
 
     for task in data:
-        total += 1
-        if task.get('completed'):
-            done += 1
-    print('Employee {} is done with tasks({}/{}):'.format(name, done, total))
-
-    for task in data:
         csv_writer.writerow([argv[1], username, task.get('completed'),
                             task.get('title')])
