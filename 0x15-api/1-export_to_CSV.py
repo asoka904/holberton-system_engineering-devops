@@ -10,7 +10,7 @@ from sys import argv
 if __name__ == '__main__':
     req = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
                        format(argv[1]))
-    name = req.json().get('name')
+    name = req.json().get('username')
     req = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                        format(argv[1]))
 
