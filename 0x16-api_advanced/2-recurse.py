@@ -10,7 +10,7 @@ import requests
 def recurse(subreddit, hot_list=[], after=""):
     """ recursively """
     if after is None:
-        return []
+        return hot_list
 
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {'User-Agent': 'python3'}
